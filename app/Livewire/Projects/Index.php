@@ -10,6 +10,10 @@ use Illuminate\Foundation\Application;
 use Livewire\Attributes\Computed;
 use Livewire\Component;
 
+
+/**
+ * @Route
+ */
 class Index extends Component
 {
     public function render(): View|Factory|Application

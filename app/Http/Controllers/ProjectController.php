@@ -14,7 +14,7 @@ class ProjectController extends Controller
         return view ('projects.index');
     }
 
-    public function show(Project $project)
+    public function show(Project $project): View|Factory|Application
     {
         return view ('projects.show', compact('project'));
     }
