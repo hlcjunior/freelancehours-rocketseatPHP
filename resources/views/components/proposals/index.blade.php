@@ -16,16 +16,19 @@
 
     <div class="py-4">
         <div class="flex flex-col gap-7">
-            @foreach($proposals->take(10) as $proposal)
+            @foreach($proposals as $proposal)
                 <x-proposals.item :$proposal :position="$loop->index"/>
             @endforeach
         </div>
 
         <div class="mt-6">
-            <button class="bg-[#181826] text-white font-bold tracking-wide uppercase px-8 py-3 rounded-[4px]
+            @if($proposals->hasMorePages())
+                <button wire:click="loadMore" class="bg-[#181826] text-white font-bold tracking-wide uppercase px-8 py-3
+            rounded-[4px]
                     hover:bg-[#373751] transition duration-300 ease-in-out w-full">
-                Carregar Mais
-            </button>
+                    Carregar Mais
+                </button>
+            @endif
         </div>
     </div>
 
