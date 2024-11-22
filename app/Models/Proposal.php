@@ -11,5 +11,5 @@ class Proposal extends Model
     /** @use HasFactory<ProposalFactory> */
     use HasFactory;
 
-    protected $fillable = ['email', 'hours'];
+    protected $fillable = ['email', 'hours', 'position_status'];
 }
